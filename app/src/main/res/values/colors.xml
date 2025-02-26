@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary">#2C9EF4</color>  <!-- New Primary (Blue) -->
+    <color name="primaryVariant">#1565C0</color> <!-- Darker Shade of Primary -->
+    <color name="secondary">#FF9800</color> <!-- New Secondary (Orange) -->
+
+</resources>
