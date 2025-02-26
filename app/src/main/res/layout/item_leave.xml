@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="4dp"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:weightSum="2">
+
+        <!-- Left Section: Dates -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvFromDate"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="From - 19/11/24"
+                android:textColor="@color/primaryVariant"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/tvTillDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Till - 20/11/24"
+                android:textColor="@color/primaryVariant"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <!-- Middle Section: Leave Type -->
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/tvLeaveReason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Medical Issue"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/primaryVariant"
+            android:textStyle="bold"/>
+
+        <!-- Right Section: Status Badge -->
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/tvLeaveStatus"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:text="Rejected"
+            android:textSize="12sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/status_rejected"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
