@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/subjectTimeRange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_bold"
+        android:text="9:00  - 10:00 "
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/timetable_line"
+        app:layout_constraintTop_toBottomOf="@id/subjectTimeRange"
+        app:layout_constraintStart_toStartOf="@id/subjectTimeRange"
+        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toEndOf="@id/subjectTimeRange" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:cardElevation="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/subjectTimeRange"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/viewGreenLine"
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:background="#54EC22"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/subjectTeacherIV"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/main_logo"
+                app:layout_constraintStart_toEndOf="@id/viewGreenLine"
+                app:civ_border_width="0.25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/subjectTeacherName"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:fontFamily="@font/inter_regular"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="Wade Warren"
+                android:textColor="@color/black"
+                android:textSize="8sp"
+                android:layout_marginStart="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/subjectTeacherIV"
+                app:layout_constraintStart_toEndOf="@+id/subjectTeacherIV"
+                app:layout_constraintTop_toTopOf="@+id/subjectTeacherIV" />
+
+            <View
+                android:id="@+id/viewGrey1"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:background="#C1C1C1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginVertical="10dp"
+                app:layout_constraintEnd_toStartOf="@id/subjectName"
+                app:layout_constraintStart_toEndOf="@id/subjectTeacherName" />
+
+            <TextView
+                android:id="@+id/subjectName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mathematics"
+                android:textSize="10sp"
+                android:fontFamily="@font/inter_regular"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@id/viewGrey1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/viewGrey2"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <View
+                android:id="@+id/viewGrey2"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:background="#C1C1C1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginVertical="10dp"
+                app:layout_constraintEnd_toStartOf="@id/subjectRoomNo"
+                app:layout_constraintStart_toEndOf="@id/subjectName" />
+
+            <TextView
+                android:id="@+id/subjectRoomNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Room No- 7"
+                android:textSize="8sp"
+                android:fontFamily="@font/inter_regular"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@id/viewGrey2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

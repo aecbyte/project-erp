@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navTimeTable"
+        android:icon="@drawable/nav_timetable"
+        android:title="Time Table"/>
+    <item
+        android:id="@+id/navFees"
+        android:icon="@drawable/nav_fees"
+        android:title="Fees"/>
+    <item
+        android:id="@+id/navCalendar"
+        android:icon="@drawable/nav_calender"
+        android:title="Calendar"/>
+    <item
+        android:id="@+id/navServiceReq"
+        android:icon="@drawable/nav_service"
+        android:title="Service Request"/>
+    <item
+        android:id="@+id/navLeave"
+        android:icon="@drawable/nav_leave"
+        android:title="Leave"/>
+    <item
+        android:id="@+id/navEvent"
+        android:icon="@drawable/nav_event"
+        android:title="Event"/>
+    <item
+        android:id="@+id/navTransport"
+        android:icon="@drawable/nav_transport"
+        android:title="Transport"/>
+    <item
+        android:id="@+id/navRemark"
+        android:icon="@drawable/nav_remark"
+        android:title="Remark"/>
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/navLogout"
+            android:icon="@drawable/nav_logout"
+            android:title="Logout"/>
+    </group>
+
+</menu>
