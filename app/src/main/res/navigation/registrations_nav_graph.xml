@@ -13,10 +13,30 @@
         <action
             android:id="@+id/action_loginFragment_to_homeScreenFragment"
             app:destination="@id/homeScreenFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_resultScreenFragment"
+            app:destination="@id/resultScreenFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_paymentScreenFragment"
+            app:destination="@id/paymentScreenFragment" />
     </fragment>
     <fragment
         android:id="@+id/homeScreenFragment"
         android:name="com.example.erpacebyte.HomeScreenFragment"
         android:label="fragment_home_screen"
-        tools:layout="@layout/fragment_home_screen" />
+        tools:layout="@layout/fragment_home_screen" >
+        <action
+            android:id="@+id/action_homeScreenFragment_to_resultScreenFragment"
+            app:destination="@id/resultScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultScreenFragment"
+        android:name="com.example.erpacebyte.ResultScreenFragment"
+        android:label="fragment_result_screen"
+        tools:layout="@layout/fragment_result_screen" />
+    <fragment
+        android:id="@+id/paymentScreenFragment"
+        android:name="com.example.erpacebyte.PaymentScreenFragment"
+        android:label="fragment_payment_screen"
+        tools:layout="@layout/fragment_payment_screen" />
 </navigation>
