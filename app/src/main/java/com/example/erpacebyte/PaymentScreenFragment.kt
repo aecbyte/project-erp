@@ -14,6 +14,7 @@ import androidx.cardview.widget.CardView
 class PaymentScreenFragment : Fragment() {
     private var isUPILayoutExpanded = false
     private var isAddUPICardExpanded = false
+    private var isAddCrDbExpanded = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,6 +27,9 @@ class PaymentScreenFragment : Fragment() {
         val expandableUPILayout = view.findViewById<LinearLayout>(R.id.upiPaymentLinearLayout)
         val mainAddUPICard = view.findViewById<CardView>(R.id.addUPICard)
         val expandedAddUPILayout = view.findViewById<CardView>(R.id.addUPICardExpanded)
+        val mainCrDbCard = view.findViewById<CardView>(R.id.creditDebitCard)
+        val expandedAddCrDrLayout = view.findViewById<CardView>(R.id.addCreDebtCardExpanded)
+
         mainUPICard.setOnClickListener {
             if(isUPILayoutExpanded){
                 collapseView(expandableUPILayout)
@@ -43,6 +47,15 @@ class PaymentScreenFragment : Fragment() {
                 expandView(expandedAddUPILayout)
             }
             isAddUPICardExpanded = !isAddUPICardExpanded
+        }
+        mainCrDbCard.setOnClickListener {
+            if (isAddCrDbExpanded){
+                collapseView(expandedAddCrDrLayout)
+            }
+            else{
+                expandView(expandedAddCrDrLayout)
+            }
+            isAddCrDbExpanded = !isAddCrDbExpanded
         }
 
 

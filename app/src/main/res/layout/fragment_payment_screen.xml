@@ -89,6 +89,86 @@
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
+                android:id="@+id/addCreDebtCardExpanded"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="-15dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/creditDebitCard"
+                app:cardElevation="16dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:paddingHorizontal="32dp"
+                    android:layout_height="match_parent">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/inputLayout2"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundMode="filled"
+                        android:paddingVertical="8dp"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        android:gravity="center"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/creDrVerificationStatus"
+                        app:boxStrokeColor="#2196F3">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/eTCrDbtNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#E6E6E6"
+                            android:paddingVertical="4dp"
+                            android:fontFamily="@font/inter_regular"
+                            android:textSize="10sp"
+                            android:singleLine="true"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:scrollHorizontally="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="#888888"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <TextView
+                        android:id="@+id/creDrVerificationStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toEndOf="@id/inputLayout2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/verifyTVBtn2"
+                        android:text="Verified"
+                        android:textColor="#3ECB34"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/inter_regular"/>
+                    <TextView
+                        android:id="@+id/verifyTVBtn2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Verify"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:gravity="center"
+                        android:background="@drawable/green_btn_bg"
+                        app:layout_constraintStart_toEndOf="@id/creDrVerificationStatus"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:fontFamily="@font/inter_regular"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
                 android:id="@+id/upiCard"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -98,7 +178,7 @@
                 app:cardCornerRadius="8dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/creditDebitCard"
+                app:layout_constraintTop_toBottomOf="@id/addCreDebtCardExpanded"
                 app:cardElevation="16dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -285,31 +365,72 @@
                     android:layout_height="40dp"
                     android:layout_marginHorizontal="24dp"
                     android:layout_marginBottom="12dp"
-                    android:layout_marginTop="-12dp"
+                    android:layout_marginTop="-15dp"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="16dp">
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:paddingHorizontal="32dp"
                         android:layout_height="match_parent">
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/inputLayout"
+                            android:layout_width="120dp"
                             android:layout_height="wrap_content"
+                            app:boxBackgroundMode="filled"
+                            android:paddingVertical="8dp"
+                            app:boxCornerRadiusTopStart="12dp"
+                            app:boxCornerRadiusTopEnd="12dp"
+                            app:boxCornerRadiusBottomStart="12dp"
+                            app:boxCornerRadiusBottomEnd="12dp"
+                            android:gravity="center"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:text="Verified"
-                            android:textColor="#3ECB34"
-                            android:textSize="14sp"
-                            android:fontFamily="@font/inter_regular"/>
-                        <ImageView
-                            android:layout_width="17dp"
-                            android:layout_height="17dp"
+                            app:layout_constraintEnd_toStartOf="@id/upiVerificationStatus"
+                            app:boxStrokeColor="#2196F3">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/eTUPIId"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#E6E6E6"
+                                android:paddingVertical="4dp"
+                                android:fontFamily="@font/inter_regular"
+                                android:textSize="10sp"
+                                android:singleLine="true"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:scrollHorizontally="true"
+                                android:textColor="@color/black"
+                                android:textColorHint="#888888"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <TextView
+                            android:id="@+id/upiVerificationStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toEndOf="@id/inputLayout"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            android:layout_weight="1"
-                            android:src="@drawable/baseline_add_24"/>
+                            app:layout_constraintEnd_toStartOf="@id/verifyTVBtn"
+                            android:text="Verified"
+                            android:textColor="#3ECB34"
+                            android:textSize="10sp"
+                            android:fontFamily="@font/inter_regular"/>
+                        <TextView
+                            android:id="@+id/verifyTVBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Verify"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            android:gravity="center"
+                            android:background="@drawable/green_btn_bg"
+                            app:layout_constraintStart_toEndOf="@id/upiVerificationStatus"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:fontFamily="@font/inter_regular"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
