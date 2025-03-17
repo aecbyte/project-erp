@@ -7,9 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
+import android.widget.ImageView
+import androidx.navigation.findNavController
 
 class ResultScreenFragment : Fragment() {
-
+    private lateinit var backIVBtn:ImageView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,6 +26,12 @@ class ResultScreenFragment : Fragment() {
         val autocompleteTV = view.findViewById<AutoCompleteTextView>(R.id.autoCompleteTextView)
 
         autocompleteTV.setAdapter(arrayAdapter)
+
+        backIVBtn = view.findViewById(R.id.ivBack)
+        backIVBtn.setOnClickListener {
+            view.findNavController().navigate(R.id.action_resultScreenFragment_to_homeScreenFragment)
+        }
+
         return view
     }
 

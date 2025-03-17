@@ -32,6 +32,14 @@
         android:id="@+id/navRemark"
         android:icon="@drawable/nav_remark"
         android:title="Remark"/>
+    <item
+        android:id="@+id/navResult"
+        android:icon="@drawable/nav_remark"
+        android:title="Result - Not in Figma"/>
+    <item
+        android:id="@+id/navAttendence"
+        android:icon="@drawable/nav_remark"
+        android:title="Attendence-Not Figma"/>
     <group android:checkableBehavior="none">
         <item
             android:id="@+id/navLogout"

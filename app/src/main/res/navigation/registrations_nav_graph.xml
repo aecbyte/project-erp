@@ -13,12 +13,6 @@
         <action
             android:id="@+id/action_loginFragment_to_homeScreenFragment"
             app:destination="@id/homeScreenFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_resultScreenFragment"
-            app:destination="@id/resultScreenFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_paymentScreenFragment"
-            app:destination="@id/paymentScreenFragment" />
     </fragment>
     <fragment
         android:id="@+id/homeScreenFragment"
@@ -28,15 +22,62 @@
         <action
             android:id="@+id/action_homeScreenFragment_to_resultScreenFragment"
             app:destination="@id/resultScreenFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_paymentScreenFragment"
+            app:destination="@id/paymentScreenFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_leaveRequestScreenFragment"
+            app:destination="@id/leaveRequestScreenFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_calenderScreenFragment"
+            app:destination="@id/calenderScreenFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_attendenceScreenFragment"
+            app:destination="@id/attendenceScreenFragment" />
     </fragment>
     <fragment
         android:id="@+id/resultScreenFragment"
         android:name="com.example.erpacebyte.ResultScreenFragment"
         android:label="fragment_result_screen"
-        tools:layout="@layout/fragment_result_screen" />
+        tools:layout="@layout/fragment_result_screen" >
+        <action
+            android:id="@+id/action_resultScreenFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
+    </fragment>
     <fragment
         android:id="@+id/paymentScreenFragment"
         android:name="com.example.erpacebyte.PaymentScreenFragment"
         android:label="fragment_payment_screen"
-        tools:layout="@layout/fragment_payment_screen" />
+        tools:layout="@layout/fragment_payment_screen" >
+        <action
+            android:id="@+id/action_paymentScreenFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calenderScreenFragment"
+        android:name="com.example.erpacebyte.CalenderScreenFragment"
+        android:label="fragment_calender_screen"
+        tools:layout="@layout/fragment_calender_screen" >
+        <action
+            android:id="@+id/action_calenderScreenFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/leaveRequestScreenFragment"
+        android:name="com.example.erpacebyte.LeaveRequestScreenFragment"
+        android:label="fragment_leave_request_screen"
+        tools:layout="@layout/fragment_leave_request_screen" >
+        <action
+            android:id="@+id/action_leaveRequestScreenFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/attendenceScreenFragment"
+        android:name="com.example.erpacebyte.AttendenceScreenFragment"
+        android:label="fragment_attendence_screen"
+        tools:layout="@layout/fragment_attendence_screen" >
+        <action
+            android:id="@+id/action_attendenceScreenFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
+    </fragment>
 </navigation>

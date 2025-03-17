@@ -8,13 +8,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.cardview.widget.CardView
+import androidx.navigation.findNavController
 
 class PaymentScreenFragment : Fragment() {
     private var isUPILayoutExpanded = false
     private var isAddUPICardExpanded = false
     private var isAddCrDbExpanded = false
+    private lateinit var backIVBtn: ImageView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -56,6 +59,10 @@ class PaymentScreenFragment : Fragment() {
                 expandView(expandedAddCrDrLayout)
             }
             isAddCrDbExpanded = !isAddCrDbExpanded
+        }
+        backIVBtn = view.findViewById(R.id.ivBack)
+        backIVBtn.setOnClickListener {
+            view.findNavController().navigate(R.id.action_paymentScreenFragment_to_homeScreenFragment)
         }
 
 

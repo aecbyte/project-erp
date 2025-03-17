@@ -20,7 +20,7 @@ class LoginFragment : Fragment() {
         val view=inflater.inflate(R.layout.fragment_login, container, false)
 
         view.findViewById<Button>(R.id.loginBtn).setOnClickListener {
-            view.findNavController().navigate(R.id.action_loginFragment_to_paymentScreenFragment)
+            view.findNavController().navigate(R.id.action_loginFragment_to_homeScreenFragment)
         }
 
         return view

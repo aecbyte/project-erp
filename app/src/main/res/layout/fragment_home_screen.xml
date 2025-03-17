@@ -311,6 +311,7 @@
                     android:textColor="@color/black"
                     android:layout_gravity="center"/>
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/timetableRV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:itemCount="7"
@@ -549,7 +550,7 @@
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
-        android:id="@+id/navViewStory"
+        android:id="@+id/navView"
         android:fitsSystemWindows="true"
         app:menu="@menu/drawer_menu"
         app:headerLayout="@layout/drawer_menu_header"
