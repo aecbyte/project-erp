@@ -2,10 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent"
-    android:background="#ECF7FF"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".AttendenceScreenFragment">
+    tools:context=".LeaveScreenFragment">
+
     <ImageView
         android:id="@+id/ivBack"
         android:layout_width="18dp"
@@ -26,82 +27,62 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <!-- Title -->
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:fontFamily="@font/montserrat_bolditalic"
-        android:text="Attendance"
+        android:layout_marginTop="10dp"
+        android:text="Leave"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="28sp"
+        android:fontFamily="@font/montserrat_bolditalic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/ivBack"
-        app:layout_constraintTop_toBottomOf="@id/separator" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/separator"/>
 
+    <!-- Card View for RecyclerView -->
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
+        android:id="@+id/card"
+        android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="23dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginHorizontal="24dp"
-        android:layout_marginVertical="24dp"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="16dp">
+        app:layout_constraintBottom_toTopOf="@id/btnApplyLeave">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/inputChooseMonth"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:background="@color/white"
-                android:layout_marginEnd="16dp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintTop_toTopOf="parent">
-                <AutoCompleteTextView
-                    android:id="@+id/autoCompleteTextViewMonth"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:textSize="12sp"
-                    android:inputType="none"
-                    android:text="Select Month"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:layout_marginTop="10dp"
-                    />
-            </com.google.android.material.textfield.TextInputLayout>
-            
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvAttendanceStatus"
+                android:id="@+id/recyclerViewLeave"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="16dp"
                 android:visibility="visible"
-                app:layout_constraintTop_toBottomOf="@id/inputChooseMonth"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginVertical="8dp"
-                tools:listitem="@layout/each_attendence_status_card"/>
+                tools:listitem="@layout/item_leave"
+                android:overScrollMode="always"/>
             <TextView
-                android:id="@+id/noAttendanceTV"
+                android:id="@+id/noLeaveTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No Attendance Added Yet"
+                android:text="No Applied Leaves"
                 android:fontFamily="@font/montserrat_bold"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/inputChooseMonth"
-                android:layout_marginHorizontal="24dp"
+                app:layout_constraintTop_toTopOf="parent"
                 android:visibility="gone"
                 android:textColor="@color/black"/>
+
+
             <View
                 android:id="@+id/viewBG"
                 android:layout_width="match_parent"
@@ -118,15 +99,33 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 
     </androidx.cardview.widget.CardView>
 
-
-
+    <!-- Apply for Leave Button -->
+    <Button
+        android:id="@+id/btnApplyLeave"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="Apply for leave"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:backgroundTint="#53B5FF"
+        android:textAllCaps="false"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        app:cornerRadius="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 
 

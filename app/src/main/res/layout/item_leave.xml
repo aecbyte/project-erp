@@ -4,16 +4,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="8dp"
-    android:layout_marginVertical="4dp"
-    app:cardCornerRadius="24dp"
+    android:layout_marginHorizontal="2dp"
+    android:layout_marginVertical="7dp"
+    app:cardCornerRadius="16dp"
     app:cardElevation="6dp"
     app:cardBackgroundColor="@android:color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:baselineAligned="false"
+        android:padding="8dp"
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:weightSum="2">
@@ -27,10 +28,11 @@
 
             <TextView
                 android:id="@+id/tvFromDate"
-                android:layout_width="170dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
                 android:text="From - 19/11/24"
-                android:textColor="@color/primaryVariant"
+                android:textColor="#1399FF"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="5dp"/>
@@ -38,9 +40,10 @@
             <TextView
                 android:id="@+id/tvTillDate"
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
                 android:layout_height="wrap_content"
                 android:text="Till - 20/11/24"
-                android:textColor="@color/primaryVariant"
+                android:textColor="#1399FF"
                 android:textSize="14sp"
                 android:textStyle="bold"/>
         </LinearLayout>
@@ -60,9 +63,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Medical Issue"
+            android:fontFamily="@font/montserrat_regular"
             android:textSize="14sp"
             android:layout_marginBottom="8dp"
-            android:textColor="@color/primaryVariant"
+            android:textColor="#1399FF"
             android:textStyle="bold"/>
 
         <!-- Right Section: Status Badge -->
@@ -72,7 +76,8 @@
             android:layout_width="80dp"
             android:layout_height="20dp"
             android:text="Rejected"
-            android:textSize="12sp"
+            android:textSize="10sp"
+            android:fontFamily="@font/montserrat_regular"
             android:textColor="@android:color/white"
             android:background="@drawable/status_rejected"
             android:gravity="center"

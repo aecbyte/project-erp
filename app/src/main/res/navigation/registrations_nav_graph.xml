@@ -26,14 +26,17 @@
             android:id="@+id/action_homeScreenFragment_to_paymentScreenFragment"
             app:destination="@id/paymentScreenFragment" />
         <action
-            android:id="@+id/action_homeScreenFragment_to_leaveRequestScreenFragment"
-            app:destination="@id/leaveRequestScreenFragment" />
-        <action
             android:id="@+id/action_homeScreenFragment_to_calenderScreenFragment"
             app:destination="@id/calenderScreenFragment" />
         <action
             android:id="@+id/action_homeScreenFragment_to_attendenceScreenFragment"
             app:destination="@id/attendenceScreenFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_leaveScreenFragment"
+            app:destination="@id/leaveScreenFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_remarkScreenFragment"
+            app:destination="@id/remarkScreenFragment" />
     </fragment>
     <fragment
         android:id="@+id/resultScreenFragment"
@@ -68,8 +71,9 @@
         android:label="fragment_leave_request_screen"
         tools:layout="@layout/fragment_leave_request_screen" >
         <action
-            android:id="@+id/action_leaveRequestScreenFragment_to_homeScreenFragment"
-            app:destination="@id/homeScreenFragment" />
+            android:id="@+id/action_leaveRequestScreenFragment_to_leaveScreenFragment"
+            app:destination="@id/leaveScreenFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/attendenceScreenFragment"
@@ -80,4 +84,18 @@
             android:id="@+id/action_attendenceScreenFragment_to_homeScreenFragment"
             app:destination="@id/homeScreenFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/leaveScreenFragment"
+        android:name="com.example.erpacebyte.LeaveScreenFragment"
+        android:label="fragment_leave_screen"
+        tools:layout="@layout/fragment_leave_screen" >
+        <action
+            android:id="@+id/action_leaveScreenFragment_to_leaveRequestScreenFragment"
+            app:destination="@id/leaveRequestScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/remarkScreenFragment"
+        android:name="com.example.erpacebyte.RemarkScreenFragment"
+        android:label="fragment_remark_screen"
+        tools:layout="@layout/fragment_remark_screen" />
 </navigation>

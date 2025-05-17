@@ -35,7 +35,7 @@ class TimeTableRVAdapter(
         holder.subjectName.text=currentItem.subjectName
         holder.teacherName.text=currentItem.teacherName
         holder.roomNo.text=currentItem.roomNo
-        holder.subjectTimeRange.text=currentItem.time
+        holder.subjectTimeRange.text=currentItem.classDuration
 
     }
 }
